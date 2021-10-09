@@ -1,0 +1,8 @@
+<div class="box">
+      <div *ngFor="let city of cities; let even = even; let odd = odd; trackBy: trackCity;"
+            [ngClass]="{ odd: odd, even: even }"
+      >
+            {{city.name}}
+      </div>
+      <button (click)="loadCities()">Load Cities</button>
+</div>
